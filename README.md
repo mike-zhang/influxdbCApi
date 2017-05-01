@@ -1,5 +1,5 @@
 # influxdbCApi   
-influxdb c client  Library
+influxdb c client library
 
 OS : CentOS6.5_x64         
 InfluxDB version : 1.1.0
