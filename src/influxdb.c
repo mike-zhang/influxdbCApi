@@ -1,6 +1,6 @@
 #include <stdlib.h>
 #include <string.h>
-#include <curl/curl.h>
+
 #include "influxdb.h"
 
 char *influxdb_strdup(const char *s)

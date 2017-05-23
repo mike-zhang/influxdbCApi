@@ -1,7 +1,13 @@
-#ifndef INFLUXDB_H_
-#define INFLUXDB_H_
+#ifndef _INFLUXDB_H_
+#define _INFLUXDB_H_
 
-# include <stdlib.h>
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+#include <stdlib.h>
+#include <curl/curl.h>
+
 # define INFLUXDB_URL_MAX_SIZE 4096
 
 #define influxdb_assign_string(dst,src) \
@@ -61,6 +67,8 @@ int influxdb_delete_database(s_influxdb_client *client,char *database_name);
 int influxdb_insert(s_influxdb_client *client,char *query);	
 int influxdb_delete(s_influxdb_client *client,char *query);	
 int influxdb_query(s_influxdb_client *client,char *query,s_influxdb_string *outstr);
+
+#ifdef __cplusplus
+}
 #endif
-
-
+#endif
